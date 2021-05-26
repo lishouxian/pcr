@@ -2,6 +2,9 @@ import xlwt
 
 
 # 设置表格样式
+from xlwt import Style
+
+
 def set_style(name, height, bold=False):
     style = xlwt.XFStyle()
     font = xlwt.Font()
@@ -10,6 +13,8 @@ def set_style(name, height, bold=False):
     font.color_index = 4
     font.height = height
     style.font = font
+
+
     return style
 
 
@@ -31,7 +36,7 @@ def write_excel():
     sheet1.write_merge(1, 2, 3, 3, '打游戏')  # 合并列单元格
     sheet1.write_merge(4, 5, 3, 3, '打篮球')
 
-    f.save('test.xls')
+    f.save('test1221.xls')
 
 
 if __name__ == '__main__':
